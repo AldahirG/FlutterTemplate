@@ -1,0 +1,74 @@
+{
+  "manufacturers": [
+    {
+      "id": 1,
+      "name": "Manufacturer A",
+      "country": "Country A"
+    },
+    {
+      "id": 2,
+      "name": "Manufacturer B",
+      "country": "Country B"
+    }
+  ],
+  "componentTypes": [
+    {
+      "id": 1,
+      "name": "Component Type A"
+    },
+    {
+      "id": 2,
+      "name": "Component Type B"
+    }
+  ],
+  "components": [
+    {
+      "id": 1,
+      "name": "Component A",
+      "manufacturer": {
+        "id": 1,
+        "name": "Manufacturer A",
+        "country": "Country A"
+      },
+      "componentType": {
+        "id": 1,
+        "name": "Component Type A"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Component B",
+      "manufacturer": {
+        "id": 2,
+        "name": "Manufacturer B",
+        "country": "Country B"
+      },
+      "componentType": {
+        "id": 2,
+        "name": "Component Type B"
+      }
+    }
+  ],
+  "computerSystems": [
+    {
+      "id": 1,
+      "name": "Computer System A",
+      "components": [
+        {
+          "componentId": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Computer System B",
+      "components": [
+        {
+          "componentId": 2,
+          "quantity": 4
+        }
+      ]
+    }
+  ]
+}
