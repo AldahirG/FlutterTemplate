@@ -10,12 +10,12 @@ class ComputerSystem {
   });
 
   factory ComputerSystem.fromJson(Map<String, dynamic> json) {
-    var componentList = json['components'] as List;
+    var componentList = json['components'] as List? ?? [];
     List<SystemComponent> components = componentList.map((i) => SystemComponent.fromJson(i)).toList();
 
     return ComputerSystem(
       id: json['id'],
-      name: json['name'],
+      name: json['name'] ?? 'Unknown System',
       components: components,
     );
   }
@@ -40,14 +40,14 @@ class SystemComponent {
 
   factory SystemComponent.fromJson(Map<String, dynamic> json) {
     return SystemComponent(
-      componentId: json['component_id'],
-      quantity: json['quantity'],
+      componentId: json['componentId'] ?? 0,
+      quantity: json['quantity'] ?? 0,
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'component_id': componentId,
+      'componentId': componentId,
       'quantity': quantity,
     };
   }

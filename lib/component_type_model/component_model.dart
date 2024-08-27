@@ -14,18 +14,14 @@ class Component {
     required this.componentType,
   });
 
-factory ComputerSystem.fromJson(Map<String, dynamic> json) {
-  var componentList = json['components'] as List?; // Puede ser nulo
-  List<SystemComponent> components = componentList != null 
-      ? componentList.map((i) => SystemComponent.fromJson(i)).toList() 
-      : [];
-
-  return ComputerSystem(
-    id: json['id'],
-    name: json['name'],
-    components: components,
-  );
-}
+  factory Component.fromJson(Map<String, dynamic> json) {
+    return Component(
+      id: json['id'],
+      name: json['name'] ?? 'Unknown',
+      manufacturer: Manufacturer.fromJson(json['manufacturer'] ?? {}),
+      componentType: ComponentType.fromJson(json['componentType'] ?? {}),
+    );
+  }
 
   Map<String, dynamic> toJson() {
     return {

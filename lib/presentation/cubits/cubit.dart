@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:scooter_app/presentation/cubits/state.dart';
+import 'package:extraa/presentation/cubits/state.dart';
 import '../../repository/repository.dart';
 
 class DataCubit extends Cubit<DataState> {

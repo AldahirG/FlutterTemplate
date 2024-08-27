@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:scooter_app/presentation/cubits/cubit.dart';
-import 'package:scooter_app/presentation/cubits/state.dart';
-import 'package:scooter_app/repository/repository.dart';
-import 'package:scooter_app/ui/dropdownbutton.dart';
-import 'package:scooter_app/ui/listview.dart';
+import 'package:extraa/presentation/cubits/cubit.dart';
+import 'package:extraa/presentation/cubits/state.dart';
+import 'package:extraa/repository/repository.dart';
+import 'package:extraa/ui/dropdownbutton.dart';
+import 'package:extraa/ui/listview.dart';
 
 class HomePage extends StatelessWidget {
   @override

@@ -12,8 +12,8 @@ class Manufacturer {
   factory Manufacturer.fromJson(Map<String, dynamic> json) {
     return Manufacturer(
       id: json['id'],
-      name: json['name'],
-      country: json['country'],
+      name: json['name'] ?? 'Unknown',
+      country: json['country'] ?? 'Unknown',
     );
   }
 

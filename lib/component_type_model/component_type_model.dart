@@ -10,7 +10,7 @@ class ComponentType {
   factory ComponentType.fromJson(Map<String, dynamic> json) {
     return ComponentType(
       id: json['id'],
-      name: json['name'],
+      name: json['name'] ?? 'Unknown',
     );
   }
 
